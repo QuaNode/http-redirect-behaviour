@@ -12,7 +12,7 @@ npm install http-redirect-behaviour
 ```js
 require('http-redirect-behaviour')({
 
-  name: 'redirectDemo',
+  name: 'redirectLocalHost',
   destination: 'http://localhost:1430'
 });
 ```
