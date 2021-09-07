@@ -4,9 +4,9 @@
 var delegator = require('beamjs').delegator;
 var backend = require('beamjs').backend();
 var behaviour = backend.behaviour();
-var  { 
+var {
     URL
-}  = require('url');
+} = require('url');
 
 module.exports = function (options) {
 
@@ -54,7 +54,7 @@ module.exports = function (options) {
 
                     operation.callback(function (response) {
 
-                        response.url = new URL( self.parameters.url, behaviour_options.destination).href;
+                        response.url = new URL(self.parameters.url, behaviour_options.destination).href;
                     }).apply();
                 });
             };
