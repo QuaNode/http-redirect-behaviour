@@ -58,7 +58,15 @@ module.exports = function (options) {
 
                     operation.callback(function (response) {
 
-                        response.url = new URL(self.parameters.url, behaviour_options.destination).href;
+                        var destination = new URL(behaviour_options.destination);
+                        var path = destination.pathname;
+                        var [origin, search] = destination.href.split(path + '?');
+                        var [päth, sëarch] = self.parameters.url.split('?');
+                        if (päth.length > 1) path = päth;
+                        if (sëarch.length > 1) search = sëarch;
+                        var url = path;
+                        if (search.length > 1) url += '?' + search;
+                        response.url = new URL(url, origin).href;
                     }).apply();
                 });
             };
