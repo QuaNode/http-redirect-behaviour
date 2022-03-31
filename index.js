@@ -62,10 +62,10 @@ module.exports = function (options) {
                         var path = destination.pathname;
                         var [origin, search] = destination.href.split(path + '?');
                         var [päth, sëarch] = self.parameters.url.split('?');
-                        if (päth.length > 1) path = päth;
-                        if (sëarch.length > 1) search = sëarch;
+                        if (päth && päth.length > 1) path = päth;
+                        if (sëarch && sëarch.length > 1) search = sëarch;
                         var url = path;
-                        if (search.length > 1) url += '?' + search;
+                        if (search && search.length > 1) url += '?' + search;
                         response.url = new URL(url, origin).href;
                     }).apply();
                 });

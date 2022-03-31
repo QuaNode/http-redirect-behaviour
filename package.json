@@ -1,6 +1,6 @@
 {
   "name": "http-redirect-behaviour",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A behavior used with BeamJS framework to redirect http/s requests with or without rules.",
   "main": "index.js",
   "scripts": {
